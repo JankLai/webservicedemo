@@ -4,7 +4,6 @@ package com.jqq.webservicedemo.entity;
 public class Admin {
     int id;
     String password;
-    String roles;
 
     public int getId() {
         return id;
@@ -22,11 +21,5 @@ public class Admin {
         this.password = password;
     }
 
-    public String getRoles() {
-        return roles;
-    }
 
-    public void setRoles(String roles) {
-        this.roles = roles;
-    }
 }

@@ -5,22 +5,19 @@
     <resultMap id="admin" type="com.jqq.webservicedemo.entity.Admin">
         <result column="id" property="id"/>
         <result column="password" property="password"/>
-        <result column="roles" property="roles"/>
     </resultMap>
 
     <select id="selectAllAdmin" resultMap="admin">
         SELECT
         ID,
-        PASSWORD,
-        ROLES
+        PASSWORD
         FROM admin;
     </select>
 
     <select id="selectAdminById" resultMap="admin">
         SELECT
         id,
-        password,
-        roles
+        password
         FROM admin
         WHERE id= #{adminId};
     </select>
@@ -28,8 +25,7 @@
     <select id="selectAdmin" resultMap="admin">
         SELECT
         id,
-        password,
-        roles
+        password
         FROM admin
         WHERE id= #{adminId} AND password=#{password};
     </select>
